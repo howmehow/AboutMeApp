@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="myName"
+            type="com.howmehow.android.aboutme.MyName" />
+    </data>
+    
 <LinearLayout
     style="@style/TextAppearance.AppCompat.Body1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/layout_margin"
     android:orientation="vertical"
-    android:outlineAmbientShadowColor="#B31111"
-    android:outlineSpotShadowColor="#741515"
     android:visibility="visible">
 
     <TextView
@@ -16,7 +21,7 @@
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/name"
+        android:text="@={myName.name}"
         android:textAlignment="center" />
 
     <EditText
